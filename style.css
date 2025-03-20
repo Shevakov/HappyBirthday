@@ -69,6 +69,31 @@ h2 {
     text-decoration: none;
 }
 
+.location a {
+    color: #ffd700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.location a:hover {
+    color: #ffffff;
+}
+
+.address {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.address a {
+    color: #ffd700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.address a:hover {
+    color: #ffffff;
+}
+
 .music-player {
     margin: 2rem 0;
 }
