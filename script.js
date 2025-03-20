@@ -4,8 +4,8 @@ var context;
 var screenH;
 var screenW;
 var stars = [];
-var fps = 50;
-var numStars = 2000;
+var fps = 30;
+var numStars = 800;
 
 $('document').ready(function() {
     // Инициализация канваса
@@ -22,14 +22,14 @@ $('document').ready(function() {
     for(var i = 0; i < numStars; i++) {
         var x = Math.round(Math.random() * screenW);
         var y = Math.round(Math.random() * screenH);
-        var length = 1 + Math.random() * 2;
-        var opacity = Math.random();
+        var length = 1 + Math.random() * 1.5;
+        var opacity = Math.random() * 0.5 + 0.2;
         
         var star = new Star(x, y, length, opacity);
         stars.push(star);
     }
     
-    setInterval(animate, 500 / fps);
+    setInterval(animate, 1000 / fps);
 
     // Обработка изменения размера окна
     $(window).resize(function() {
@@ -67,20 +67,18 @@ function Star(x, y, length, opacity) {
     this.length = parseInt(length);
     this.opacity = opacity;
     this.factor = 1;
-    this.increment = Math.random() * .03;
+    this.increment = Math.random() * .02;
 }
 
 Star.prototype.draw = function() {
-    context.rotate((Math.PI * 1 / 10));
-    
     context.save();
     
     context.translate(this.x, this.y);
     
-    if(this.opacity > 1) {
+    if(this.opacity > 0.7) {
         this.factor = -1;
     }
-    else if(this.opacity <= 0) {
+    else if(this.opacity <= 0.2) {
         this.factor = 1;
         
         this.x = Math.round(Math.random() * screenW);
@@ -90,18 +88,9 @@ Star.prototype.draw = function() {
     this.opacity += this.increment * this.factor;
     
     context.beginPath();
-    for (var i = 5; i--;) {
-        context.lineTo(0, this.length);
-        context.translate(0, this.length);
-        context.rotate((Math.PI * 2 / 10));
-        context.lineTo(0, - this.length);
-        context.translate(0, - this.length);
-        context.rotate(-(Math.PI * 6 / 10));
-    }
-    context.lineTo(0, this.length);
-    context.closePath();
-    context.fillStyle = "rgba(255, 255, 200, " + this.opacity + ")";
-    context.shadowBlur = 5;
+    context.arc(0, 0, this.length, 0, Math.PI * 2);
+    context.fillStyle = `rgba(255, 255, 200, ${this.opacity})`;
+    context.shadowBlur = 3;
     context.shadowColor = '#ffff33';
     context.fill();
     
