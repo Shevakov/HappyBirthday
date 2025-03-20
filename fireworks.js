@@ -144,8 +144,10 @@ document.querySelector('h1').addEventListener('click', (e) => {
                 x + (Math.random() - 0.5) * 100,
                 y + (Math.random() - 0.5) * 100
             );
+            // Запускаем анимацию при создании первого фейерверка
+            if (i === 0) {
+                fireworksManager.update();
+            }
         }, i * 100);
     }
-    
-    fireworksManager.update();
 }); 
