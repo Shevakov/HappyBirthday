@@ -5,7 +5,7 @@ var screenH;
 var screenW;
 var stars = [];
 var fps = 30;
-var numStars = 800;
+var numStars = 400;
 
 $('document').ready(function() {
     // Инициализация канваса
