@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>День рождения Танюшки</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <canvas id="space"></canvas>
+    
+    <div class="content">
+        <div class="invitation-section">
+            <h1>35</h1>
+            <h2>Дорогие гости!</h2>
+            <p class="main-text">Приглашаю вас на свой День Рождения!</p>
+            
+            <div class="details">
+                <p class="date">23-24 мая</p>
+                <p class="location">@https://vzelenomgorode.ru/</p>
+            </div>
+
+            <div class="music-player">
+                <button id="playButton" class="play-button">
+                    <span class="play-icon">▶</span>
+                    <span class="pause-icon">⏸</span>
+                </button>
+                <audio id="birthdaySong" src="sektor-gaza-30-let.mp3"></audio>
+            </div>
+        </div>
+
+        <div class="timeline-section">
+            <h3>Программа мероприятия</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="time">23 мая</div>
+                    <div class="event">Заезд гостей</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">23 мая - Вечер</div>
+                    <div class="event">Праздничный ужин и развлекательная программа</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">24 мая</div>
+                    <div class="event">Выезд</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
