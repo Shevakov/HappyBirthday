@@ -530,4 +530,80 @@ h2 {
 .wishlist-link:hover {
     background: #000;
     color: #fff;
+}
+
+.countdown-section {
+    background: white;
+    color: black;
+    padding: 3rem 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.countdown-section h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+}
+
+.countdown-item span {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.countdown-item .label {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .countdown-section {
+        padding: 2rem 1rem;
+    }
+
+    .countdown-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .countdown {
+        gap: 0.5rem;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        max-width: 100%;
+        overflow-x: auto;
+        padding: 0.5rem 0;
+    }
+
+    .countdown-item {
+        min-width: auto;
+        flex: 1;
+        padding: 0 0.25rem;
+    }
+
+    .countdown-item span {
+        font-size: 1.8rem;
+    }
+
+    .countdown-item .label {
+        font-size: 0.8rem;
+    }
 } 
