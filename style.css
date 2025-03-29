@@ -144,31 +144,90 @@ h2 {
 
 .timeline-section h3 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
 }
 
 .timeline {
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #000;
 }
 
 .timeline-item {
     display: flex;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
+    align-items: center;
+    margin-bottom: 3rem;
+    position: relative;
 }
 
-.time {
+.timeline-icon {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.timeline-icon svg {
+    width: 24px;
+    height: 24px;
+    color: #000;
+}
+
+.timeline-content {
+    width: 45%;
+    padding: 20px;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: auto;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-right: auto;
+    text-align: right;
+    padding-right: 50px;
+}
+
+.timeline-content h4 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.timeline-content h5 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
     font-weight: bold;
-    min-width: 150px;
 }
 
-.event {
-    flex-grow: 1;
-    padding-left: 2rem;
+.timeline-content p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
 }
 
 @media (max-width: 768px) {
@@ -184,15 +243,19 @@ h2 {
         font-size: 1.5rem;
     }
     
-    .timeline-item {
-        flex-direction: column;
+    .timeline::before {
+        left: 30px;
     }
-    
-    .time {
-        margin-bottom: 0.5rem;
+
+    .timeline-icon {
+        left: 30px;
+        transform: none;
     }
-    
-    .event {
-        padding-left: 0;
+
+    .timeline-content {
+        width: calc(100% - 80px);
+        margin-left: 80px !important;
+        text-align: left !important;
+        padding: 20px !important;
     }
 } 
