@@ -478,4 +478,35 @@ h2 {
     .details-link {
         font-size: 0.9rem;
     }
+}
+
+.wishlist-section {
+    background: white;
+    color: black;
+    padding: 3rem 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.wishlist-text {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.wishlist-link {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border: 2px solid #000;
+    padding: 0.5rem 2rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-family: 'Playfair Display', serif;
+}
+
+.wishlist-link:hover {
+    background: #000;
+    color: #fff;
 } 
