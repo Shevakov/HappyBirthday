@@ -144,7 +144,7 @@ h2 {
 
 .timeline-section h3 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 4rem;
     font-family: 'Playfair Display', serif;
     font-style: italic;
@@ -281,5 +281,79 @@ h2 {
 
     .timeline-content p {
         font-size: 0.9rem;
+    }
+}
+
+.transfer-section {
+    background: white;
+    color: black;
+    padding: 4rem 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.transfer-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.transfer-info {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.route-table {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 10px;
+}
+
+.route-table h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.route-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.route-table th {
+    padding: 1rem;
+    border-bottom: 2px solid #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.route-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.1rem;
+}
+
+.route-table tr:last-child td {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .transfer-section {
+        padding: 2rem 1rem;
+    }
+
+    .route-table {
+        padding: 1rem;
+    }
+
+    .route-table th,
+    .route-table td {
+        padding: 0.75rem;
+        font-size: 1rem;
     }
 } 
