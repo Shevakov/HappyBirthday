@@ -344,22 +344,64 @@ h2 {
 
 @media (max-width: 768px) {
     .route-table {
-        padding: 1rem;
-        margin: 0 0.5rem;
+        padding: 1rem 0.5rem;
+        margin: 0;
+        width: 100%;
+        overflow-x: hidden;
     }
 
     .route-table table {
         font-size: 0.9rem;
+        width: 100%;
+        table-layout: fixed;
     }
 
     .route-table th,
     .route-table td {
         padding: 0.5rem;
         font-size: 0.9rem;
+        vertical-align: top;
+    }
+
+    .route-table th:first-child,
+    .route-table td:first-child {
+        width: 30%;
+    }
+
+    .route-table th:last-child,
+    .route-table td:last-child {
+        width: 70%;
     }
 
     .route-table td {
         word-break: break-word;
+        hyphens: auto;
+    }
+}
+
+@media (max-width: 375px) {
+    .route-table {
+        padding: 0.5rem 0.25rem;
+    }
+
+    .route-table table {
+        font-size: 0.8rem;
+    }
+
+    .route-table th,
+    .route-table td {
+        padding: 0.4rem;
+        font-size: 0.8rem;
+    }
+
+    .route-table th:first-child,
+    .route-table td:first-child {
+        width: 35%;
+    }
+
+    .route-table th:last-child,
+    .route-table td:last-child {
+        width: 65%;
     }
 }
 
@@ -538,6 +580,9 @@ h2 {
     padding: 3rem 2rem;
     text-align: center;
     width: 100%;
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
 }
 
 .countdown-section h3 {
@@ -551,6 +596,9 @@ h2 {
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
+    background: white;
+    position: relative;
+    z-index: 2;
 }
 
 .countdown-item {
@@ -576,6 +624,7 @@ h2 {
 @media (max-width: 768px) {
     .countdown-section {
         padding: 2rem 1rem;
+        margin-top: 0;
     }
 
     .countdown-section h3 {
@@ -591,12 +640,14 @@ h2 {
         max-width: 100%;
         overflow-x: auto;
         padding: 0.5rem 0;
+        -webkit-overflow-scrolling: touch;
     }
 
     .countdown-item {
         min-width: auto;
         flex: 1;
         padding: 0 0.25rem;
+        background: white;
     }
 
     .countdown-item span {
