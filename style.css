@@ -154,6 +154,7 @@ h2 {
     max-width: 800px;
     margin: 0 auto;
     position: relative;
+    padding: 0 20px;
 }
 
 .timeline::before {
@@ -243,19 +244,42 @@ h2 {
         font-size: 1.5rem;
     }
     
+    .timeline {
+        padding: 0;
+    }
+
     .timeline::before {
-        left: 30px;
+        left: 50px;
     }
 
     .timeline-icon {
-        left: 30px;
-        transform: none;
+        left: 50px;
+        transform: translateX(-50%);
     }
 
     .timeline-content {
-        width: calc(100% - 80px);
-        margin-left: 80px !important;
+        width: calc(100% - 100px);
+        margin-left: 100px !important;
         text-align: left !important;
-        padding: 20px !important;
+        padding: 0 !important;
+        padding-bottom: 20px !important;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        padding-left: 20px !important;
+        padding-right: 0 !important;
+    }
+
+    .timeline-content h4 {
+        font-size: 2rem;
+    }
+
+    .timeline-content h5 {
+        font-size: 1.1rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
     }
 } 
