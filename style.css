@@ -342,6 +342,27 @@ h2 {
     border-bottom: none;
 }
 
+@media (max-width: 768px) {
+    .route-table {
+        padding: 1rem;
+        margin: 0 0.5rem;
+    }
+
+    .route-table table {
+        font-size: 0.9rem;
+    }
+
+    .route-table th,
+    .route-table td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .route-table td {
+        word-break: break-word;
+    }
+}
+
 .accommodation-section {
     background: white;
     color: black;
